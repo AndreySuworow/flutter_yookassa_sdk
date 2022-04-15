@@ -123,8 +123,8 @@ public class SwiftFlutterYookassaSdkPlugin: NSObject, FlutterPlugin {
               let customizationSettings = fetchCustomizationSettings(myArgs: myArgs)
               let gatewayId = myArgs["gatewayId"] as? String
               // TODO: Incoming version 6.6.0
-//              let customerId = myArgs["customerId"] as? String
-//              let isSafeDeal = myArgs["isSafeDeal"] as? Bool ?? false
+              let customerId = myArgs["customerId"] as? String
+              let isSafeDeal = myArgs["isSafeDeal"] as? Bool ?? false
               let bankCardRepeatModuleInputData = BankCardRepeatModuleInputData(
                   clientApplicationKey: clientApplicationKey,
                   shopName: shopName,
@@ -137,8 +137,8 @@ public class SwiftFlutterYookassaSdkPlugin: NSObject, FlutterPlugin {
                   savePaymentMethod: savePaymentMethod.toSavePaymentMethod(),
                   gatewayId: gatewayId)
               // TODO: Incoming version 6.6.0
-//                  customerId: customerId,
-//                  isSafeDeal: isSafeDeal)
+                  customerId: customerId,
+                  isSafeDeal: isSafeDeal)
               // Отображаю вьюшку
               self.present {
                   self.vc.startBankCardCheckout(
