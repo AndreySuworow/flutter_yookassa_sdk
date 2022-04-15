@@ -62,6 +62,7 @@ public class SwiftFlutterYookassaSdkPlugin: NSObject, FlutterPlugin {
                   let userPhoneNumber = myArgs["userPhoneNumber"] as? String
                   let moneyAuthClientId = myArgs["moneyAuthClientId"] as? String
                   let applicationScheme = myArgs["applicationScheme"] as? String
+                  let customerId = myArgs["customerId"] as? String
                   let tokenizationModuleInputData = TokenizationModuleInputData(
                       clientApplicationKey: clientApplicationKey,
                       shopName: shopName,
@@ -75,7 +76,8 @@ public class SwiftFlutterYookassaSdkPlugin: NSObject, FlutterPlugin {
                       customizationSettings: customizationSettings,
                       savePaymentMethod: savePaymentMethod.toSavePaymentMethod(),
                       moneyAuthClientId: moneyAuthClientId,
-                      applicationScheme: applicationScheme)
+                      applicationScheme: applicationScheme,
+                      customerId:customerId)
                   
                   // Отображаю вьюшку
                   self.present {
