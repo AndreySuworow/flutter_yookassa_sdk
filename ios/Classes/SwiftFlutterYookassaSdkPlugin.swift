@@ -137,8 +137,7 @@ public class SwiftFlutterYookassaSdkPlugin: NSObject, FlutterPlugin {
                   isLoggingEnabled: isLoggingEnabled,
                   customizationSettings: customizationSettings,
                   savePaymentMethod: savePaymentMethod.toSavePaymentMethod(),
-                  gatewayId: gatewayId)
-              // TODO: Incoming version 6.6.0
+                  gatewayId: gatewayId,
                   customerId: customerId,
                   isSafeDeal: isSafeDeal)
               // Отображаю вьюшку
